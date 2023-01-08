@@ -87,9 +87,13 @@ def query3():
     for row in cur:
         month.append(row[0])
         accident.append(row[1])
+    x_range = range(len(month))
+    figure, bar_ax = plt.subplots()
+    bar_ax.set_title('Кількість інцидентів в різні місяці')
+    bar_ax.set_xlabel('month')
+    bar_ax.set_ylabel('number of accident')
     plt.bar(month, accident)
     plt.xticks(month, ['Feb', 'Mar', 'Apr', 'May', 'June', 'July', 'Oct', 'Nov'])
-    plt.title('Кількість інцидентів в різні місяці')
     plt.show()
 
 
