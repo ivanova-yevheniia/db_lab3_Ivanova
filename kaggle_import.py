@@ -59,7 +59,7 @@ def query2():
 
 def query3():
     with open(r"C:\Users\yevhe\OneDrive\Desktop\Data Base\accident.csv", 'r') as f3:
-        cur.execute('DROP VIEW IF EXISTS accident_new')
+        cur.execute('DROP TABLE IF EXISTS accident_new')
         cur.execute(query_3)
         next(f3)
         cur.copy_from(f3, 'accident_new', sep=',')
