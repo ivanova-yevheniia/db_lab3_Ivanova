@@ -39,7 +39,7 @@ CREATE TABLE accident_new(
 	address_id		CHAR(50) NOT NULL,
 	accident_date	        DATE,
 	severity	        CHAR(50) NULL
-);
+)
 '''
 
 def query1():
